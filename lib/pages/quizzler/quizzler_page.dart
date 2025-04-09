@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
+import '../../constants/dashboard_item_data.dart';
 import '../../helpers/quiz_brain.dart';
+import '../../widgets/app_drawer.dart';
 
 QuizBrain quizBrain = QuizBrain();
 
@@ -11,6 +13,12 @@ class QuizzlerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Quizzler'),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
+      drawer: AppDrawer(items: dashboardItems),
       backgroundColor: Colors.grey.shade900,
       body: SafeArea(
         child: Padding(

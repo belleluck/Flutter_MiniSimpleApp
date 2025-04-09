@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../constants/dashboard_item_data.dart';
+import '../../widgets/app_drawer.dart';
+
 
 class MiCardPage extends StatelessWidget {
   const MiCardPage({super.key});
@@ -7,6 +10,12 @@ class MiCardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('MiCard'),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
+      drawer: AppDrawer(items: dashboardItems),
       backgroundColor: Colors.teal,
       body: SafeArea(
           child: Column(

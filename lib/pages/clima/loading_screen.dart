@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../../constants/dashboard_item_data.dart';
+import '../../widgets/app_drawer.dart';
 import 'location_screen.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import '../../services/weather.dart';
@@ -32,6 +34,12 @@ class _LoadingScreenState extends State<LoadingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Clima'),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
+      drawer: AppDrawer(items: dashboardItems),
       body: Center(
         child: SpinKitDoubleBounce(
           color: Colors.white,

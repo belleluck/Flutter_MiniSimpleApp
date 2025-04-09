@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../constants/constants.dart';
+import '../../constants/dashboard_item_data.dart';
+import '../../widgets/app_drawer.dart';
 import '../../widgets/reusable_card.dart';
 import '../../widgets/bottom_button.dart';
 
@@ -18,8 +20,9 @@ class ResultsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BMI CALCULATOR'),
+        title: Text('BMI Calculator'),
       ),
+      drawer: AppDrawer(items: dashboardItems),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.stretch,

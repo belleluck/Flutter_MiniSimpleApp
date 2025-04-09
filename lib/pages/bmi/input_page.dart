@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../constants/dashboard_item_data.dart';
+import '../../widgets/app_drawer.dart';
 import 'results_page.dart';
 import '../../widgets/bottom_button.dart';
 import '../../widgets/round_icon_button.dart';
@@ -32,8 +34,9 @@ class _InputPageState extends State<InputPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BMI CALCULATOR'),
+        title: Text('BMI Calculator'),
       ),
+      drawer: AppDrawer(items: dashboardItems),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[

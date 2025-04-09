@@ -1,6 +1,9 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
+import '../../constants/dashboard_item_data.dart';
+import '../../widgets/app_drawer.dart';
+
 
 class XylophonePage extends StatelessWidget {
   const XylophonePage({super.key});
@@ -28,6 +31,12 @@ class XylophonePage extends StatelessWidget {
     }
 
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Xylophone'),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
+      drawer: AppDrawer(items: dashboardItems),
       backgroundColor: Colors.black,
       body: SafeArea(
         child: Column(

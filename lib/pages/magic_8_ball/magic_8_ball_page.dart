@@ -1,6 +1,9 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
+import '../../constants/dashboard_item_data.dart';
+import '../../widgets/app_drawer.dart';
+
 
 class Magic8BallPage extends StatelessWidget {
   const Magic8BallPage({super.key});
@@ -8,6 +11,7 @@ class Magic8BallPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: AppDrawer(items: dashboardItems),
       backgroundColor: Colors.blue,
       appBar: AppBar(
         backgroundColor: Colors.blue.shade900,

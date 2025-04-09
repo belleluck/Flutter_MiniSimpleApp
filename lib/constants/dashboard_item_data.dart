@@ -27,7 +27,7 @@ import '../pages/xylophone/xylophone_page.dart';
 // ];
 
 final List<DashboardItem> dashboardItems = [
-  DashboardItem("Bitcoin",        'images/bitcoin.png', BitcoinPage(), Colors.orange),
+  DashboardItem("Coin Ticker",    'images/bitcoin.png', BitcoinPage(), Colors.orange),
   DashboardItem("BMI Calculator", 'images/bmi.png', BMICalculatorPage(), Colors.green),
   DashboardItem("Clima",          'images/clima.png', ClimaPage(), Colors.blue),
   DashboardItem("Destini",        'images/destini.png', DestiniPage(), Colors.deepPurple),

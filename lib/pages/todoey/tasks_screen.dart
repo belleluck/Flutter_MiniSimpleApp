@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../../constants/dashboard_item_data.dart';
+import '../../widgets/app_drawer.dart';
 import '../../widgets/tasks_list.dart';
 import 'add_task_screen.dart';
 import 'package:provider/provider.dart';
@@ -8,6 +10,12 @@ class TasksScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Todoey'),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
+      drawer: AppDrawer(items: dashboardItems),
       backgroundColor: Colors.lightBlueAccent,
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.lightBlueAccent,

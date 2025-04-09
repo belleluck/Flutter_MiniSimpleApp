@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../../constants/dashboard_item_data.dart';
+import '../../widgets/app_drawer.dart';
 import 'login_screen.dart';
 import 'registration_screen.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
@@ -41,6 +43,12 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('⚡️Chat'),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
+      drawer: AppDrawer(items: dashboardItems),
       backgroundColor: animation.value,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),

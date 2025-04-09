@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../../constants/dashboard_item_data.dart';
+import '../../widgets/app_drawer.dart';
 import '../../widgets/rounded_button.dart';
 import '../../constants/constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -22,6 +24,12 @@ class LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('⚡️Chat'),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
+      drawer: AppDrawer(items: dashboardItems),
       backgroundColor: Colors.white,
       body: ModalProgressHUD(
         inAsyncCall: showSpinner,

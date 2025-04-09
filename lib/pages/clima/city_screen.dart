@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../constants/constants.dart';
+import '../../constants/dashboard_item_data.dart';
+import '../../widgets/app_drawer.dart';
 
 class CityScreen extends StatefulWidget {
   @override
@@ -12,6 +14,12 @@ class _CityScreenState extends State<CityScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Clima'),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
+      drawer: AppDrawer(items: dashboardItems),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(

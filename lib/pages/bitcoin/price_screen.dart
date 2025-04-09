@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import '../../constants/dashboard_item_data.dart';
 import '../../services/coin_data.dart';
 import 'dart:io' show Platform;
 import 'package:flutter/foundation.dart';
+
+import '../../widgets/app_drawer.dart';
 
 class PriceScreen extends StatefulWidget {
   const PriceScreen({super.key});
@@ -109,6 +112,7 @@ class PriceScreenState extends State<PriceScreen> {
       appBar: AppBar(
         title: Text('🤑 Coin Ticker'),
       ),
+      drawer: AppDrawer(items: dashboardItems),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.stretch,

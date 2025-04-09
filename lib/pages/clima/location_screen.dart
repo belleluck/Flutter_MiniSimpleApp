@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../constants/constants.dart';
+import '../../constants/dashboard_item_data.dart';
 import '../../services/weather.dart';
+import '../../widgets/app_drawer.dart';
 import 'city_screen.dart';
 
 class LocationScreen extends StatefulWidget {
@@ -47,6 +49,12 @@ class _LocationScreenState extends State<LocationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Clima'),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
+      drawer: AppDrawer(items: dashboardItems),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
