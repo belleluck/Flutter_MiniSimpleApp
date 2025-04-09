@@ -1,0 +1,85 @@
+name: mini_simple_app
+description: "A new Flutter project."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.8
+
+  #  https://pub.dev/packages/http
+  http: ^1.3.0
+
+  # https://pub.dev/packages/font_awesome_flutter
+  font_awesome_flutter: ^10.8.0
+
+  # https://pub.dev/packages/geolocator
+  geolocator: ^13.0.4
+
+  # https://pub.dev/packages/flutter_spinkit
+  flutter_spinkit: ^5.2.1
+
+  # https://pub.dev/packages/sensors_plus
+  sensors_plus: ^6.1.1
+
+  # https://pub.dev/packages/animated_text_kit
+  animated_text_kit: ^4.2.3
+
+  # https://pub.dev/packages/firebase_core
+  firebase_core: ^3.13.0
+
+  # https://pub.dev/packages/firebase_auth
+  firebase_auth: ^5.5.2
+
+  # https://pub.dev/packages/cloud_firestore
+  cloud_firestore: ^5.6.6
+
+  # https://pub.dev/packages/modal_progress_hud_nsn
+  modal_progress_hud_nsn: ^0.5.1
+  #modal_progress_hud: ^0.1.3
+
+  # https://pub.dev/packages/rflutter_alert
+  rflutter_alert: ^2.0.7
+
+  # https://pub.dev/packages/provider
+  provider: ^6.1.4
+
+  # https://pub.dev/packages/audioplayers
+  audioplayers: ^6.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - images/
+    - assets/
+
+  fonts:
+    - family: Pacifico
+      fonts:
+        - asset: fonts/Pacifico-Regular.ttf
+
+    - family: Source Sans Pro
+      fonts:
+        - asset: fonts/SourceSansPro-Regular.ttf
+
+
+
