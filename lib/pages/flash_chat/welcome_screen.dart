@@ -65,12 +65,24 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                     height: 60.0,
                   ),
                 ),
-                TypewriterAnimatedTextKit(
-                  text: ['Flash Chat'],
-                  textStyle: TextStyle(
-                    fontSize: 45.0,
-                    fontWeight: FontWeight.w900,
-                  ),
+                AnimatedTextKit(
+                  animatedTexts: [
+                    TypewriterAnimatedText(
+                      'Flash Chat',
+                      textStyle: TextStyle(
+                        fontSize: 35.0,
+                        fontWeight: FontWeight.w900,
+                        color: Colors.blue,
+                      ),
+                      speed: const Duration(milliseconds: 100),
+                      cursor: '|', // Cursor character
+                    ),
+                  ],
+                  isRepeatingAnimation: true,
+                  repeatForever: true,
+                  pause: const Duration(milliseconds: 1000),
+                  displayFullTextOnTap: true,
+                  stopPauseOnTap: true,
                 ),
               ],
             ),
