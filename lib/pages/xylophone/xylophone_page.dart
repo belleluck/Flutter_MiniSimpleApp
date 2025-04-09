@@ -33,7 +33,7 @@ class XylophonePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Xylophone'),
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.grey.shade300,
         elevation: 0,
       ),
       drawer: AppDrawer(items: dashboardItems),

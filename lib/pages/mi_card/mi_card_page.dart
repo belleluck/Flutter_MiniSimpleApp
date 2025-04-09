@@ -59,7 +59,7 @@ class MiCardPage extends StatelessWidget {
                       color: Colors.teal,
                     ),
                     title: Text(
-                      '+44 123 456 789',
+                      '+65 8449 2006',
                       style: TextStyle(
                         color: Colors.teal.shade900,
                         fontFamily: 'Source Sans Pro',
