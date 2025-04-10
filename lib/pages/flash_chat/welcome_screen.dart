@@ -1,3 +1,5 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import '../../constants/dashboard_item_data.dart';
 import '../../widgets/app_drawer.dart';
@@ -19,10 +21,13 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     with SingleTickerProviderStateMixin {
   late AnimationController controller;
   late Animation animation;
+  final _auth = FirebaseAuth.instance;
 
   @override
   void initState() {
     super.initState();
+
+    getCurrentUser();
 
     controller =
         AnimationController(duration: Duration(seconds: 1), vsync: this);
@@ -32,6 +37,19 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     controller.addListener(() {
       setState(() {});
     });
+  }
+
+  void getCurrentUser() async {
+    try {
+      final user = _auth.currentUser;
+      if (user != null) {
+        _auth.signOut();
+      }
+    } catch (e) {
+      if (kDebugMode) {
+        print(e);
+      }
+    }
   }
 
   @override
