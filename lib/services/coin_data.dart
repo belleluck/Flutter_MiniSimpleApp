@@ -36,7 +36,7 @@ class CoinData {
     for (String crypto in cryptoList) {
       String requestURL =
           '$coinAPIURL/$crypto/$selectedCurrency?apikey=$apiKey';
-      http.Response response = await http.get(requestURL as Uri);
+      http.Response response = await http.get(Uri.parse(requestURL));
       if (response.statusCode == 200) {
         var decodedData = jsonDecode(response.body);
         double price = decodedData['rate'];
